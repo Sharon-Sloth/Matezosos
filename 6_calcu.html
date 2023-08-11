@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Matezosos| Calculadora </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/png" href="Images\SlothIcon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body class="txt-regular Maxheight">
+    <header>
+        <h1>Conclusión</h1>
+
+        <!--  selector de tamaños de letra  -->
+        <div=class="accesibilidad-btn">
+            <button onclick="changeTxt('txt-regular')" class="accesibilidad txt-regular">
+                A
+            </button>
+            <button onclick="changeTxt('txt-mediano')" class="accesibilidad txt-mediano">
+                A
+            </button>
+            <button onclick="changeTxt('txt-grande')" class="accesibilidad txt-grande">
+                A
+            </button>
+            </div>
+    </header>
+
+    <div class="contenido-pagina">
+
+        <!-- menú lateral de navegación -->
+        <aside>
+            <div class="side-menu">
+                <nav>
+                    <ul class="lista-menu" , style="list-style: none;">
+                        <h3 class="titulo">Menu</h3>
+                        <li><a href="1_Index.html">Inicio</a></li>
+                        <li><a href="2_relaciones.html">Contenidos</a></li>
+                        <li><a href="3_Actividad.html">¡A jugar!</a></li>
+                        <li><a href="4_Cuento.html">Cuento</a></li>
+                        <li><a href="5_Evaluacion.html">Evaluación</a></li>
+                        <li class="activo"><a>Calculadora</a></li>
+                        <li><a href="7_blockNotas.html">Block de notas</a></li>
+                        <li><a href="8_Conclusion.html">Conclusión</a></li>
+                        <li><a href="9_Bibliografia.html">Bibliografía</a></li>
+                    </ul>
+                </nav>
+                <div class="datoFracciones">
+                    <button class="datobtn" id="mostrarDatoAleatorio">Mostrar Dato Aleatorio</button>
+                    <div id="resultado"></div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <div class="Instrucciones" >
+                <h2>Instrucciones</h2>
+                <ul>
+                    <li>Escribe los operandos en las casillas indicadas.</li>
+                    <li>Recuerda que sólo se permiten números.</li>
+                    <li>Selecciona la operación que desees realizar.</li>
+                    <li>Presiona el botón <b>Calcular</b>.</li>
+                    <li>El resultado de la operación se mostrará en pantalla.</li>
+                    <li>Use el botón de <b>Limpiar</b> para limpiar los campos.</li>
+                </ul>
+            </div>
+            <div class="calculadora">
+                <h2>Calculadora</h2>
+                <label for="operand1">Operando 1:</label>
+                <input type="text" class="numeroInput" id="operand1" placeholder="Operando 1" class="number-input">
+                <label for="operand2">Operando 2:</label>
+                <input type="text" class="numeroInput" id="operand2" placeholder="Operando 2" class="number-input">
+                <label for="operador" >Operación:</label>
+                <select id="operador" class="calcubtn">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <button id="calculate" class="calcubtn">Calcular</button>
+                <div id="result"></div>
+                <button id="borrarBtn" class="calcubtn">Limpiar</button>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>
+            <h1>Matezosos 2023</h1>
+            <h3>Diseño e implementación <br>Sharon Jimenez Gomez</h3>
+        </div>
+        <div><img src="Images/slothFooter.png" width="70"></div>
+        <div>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                    alt="Licencia Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Esta
+            obra está bajo una <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"
+                target="_blank">
+                Licencia
+                Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a>.
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="calculadora.js"></script>
+    <script src= "ajax.js" ></script>
+</body>
+
+</html>

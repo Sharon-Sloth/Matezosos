@@ -1,0 +1,803 @@
+/* HOJA DE ESTILOS PARA EL SITIO WEB */
+
+:root {
+  --item-size: 200px;
+  font-family: 'Poppins', sans-serif;
+  word-wrap: initial;
+  overflow-wrap: anywhere;
+}
+
+/* Estilos generales */
+html {
+  scroll-behavior: smooth;
+  --color-fondo: #374785;
+  --color-menu: #091a37;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+.Maxheight {
+  height: 100%;
+}
+
+/* Estilos para el encabezado -------------------------------------------- */
+header {
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+  background: rgb(76, 114, 149);
+  background: linear-gradient(180deg, rgba(76, 114, 149, 1) 13%, rgba(9, 26, 55, 1) 82%);
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Estilos para el contenido principal ------------------------------------------------------------------ */
+main {
+  margin: auto 30px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+
+/* Estilos para el pie de página ------------------------------------------------------------------------- */
+footer {
+  background: rgb(1, 6, 11);
+  background: linear-gradient(0deg, rgba(1, 6, 11, 1) 13%, rgba(9, 26, 55, 1) 82%);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Estilos para el menu ----------------------------------------------------------------------------------- */
+.side-menu {
+  /* Estilos generales del contenedor del menu*/
+  background-color: var(--color-menu);
+  border-radius: 0px 0px 30px 30px;
+  position: sticky;
+}
+
+.lista-menu li a {
+  /* Estilos generales del texto del menu*/
+  display: block;
+  color: #ffffff;
+  padding: 10px 10px;
+  text-decoration: none;
+  transition: .3s ease all;
+  text-align: left;
+}
+
+aside .lista-menu li.activo a,
+.lista-menu li a:hover {
+  /* Efecto del mouse sobre la opcion menu*/
+  color: #f8e9a1;
+  text-shadow: #A8d0e6;
+}
+
+aside .lista-contenidos li {
+  position: relative;
+}
+
+aside .side-menu {
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
+}
+
+aside .titulo {
+  text-align: center;
+  color: #ffffff;
+}
+
+aside .lista-contenidos {
+  list-style: none;
+  border-left: 2px solid #7d828b;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+
+aside .lista-contenidos li a {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 10px;
+  text-decoration: none;
+  transition: .3s ease all;
+}
+
+aside .lista-contenidos li.activo a,
+aside .lista-contenidos li a:hover {
+  color: #f8e9a1;
+}
+
+aside .lista-contenidos li::before {
+  content: "";
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #A8d0e6;
+  border: 2px solid #3e56b8;
+  position: absolute;
+  left: -19px;
+  top: calc(50% - 10px);
+  transition: .3s ease all;
+}
+
+aside .lista-contenidos li.activo::before {
+  background: #f8e9a1;
+  border: 2px solid #f76c6c;
+}
+
+aside .lista-contenidos li:hover::before {
+  border: 2px solid #f76c6c;
+}
+
+/* Estilos para el texto de contenido curricular ------------------------------------------------------------*/
+.txt-destacado {
+  background-color: #c0cde4;
+  padding: 10px;
+  margin: 4px;
+  border-left: 6px solid #091a37;
+}
+
+.txt-clasificacion {
+  margin: 16px;
+  border-top: 6px double #091a37;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+.contenido-pagina {
+  background-color: #091a37;
+  color: #ffffff;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 15% auto;
+}
+
+main .contenidos {
+  background-color: #fff;
+  color: #091a37;
+  border-radius: 0px 0px 30px 30px;
+}
+
+
+.centrado {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.txt-normal {
+  padding: 4px;
+  width: 100%;
+  max-width: max-content;
+}
+
+
+
+.bloque-imagen {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.parrafo-imagen {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  margin: 16px;
+}
+
+/* Estilos para pagina de evaluacion------------------------------------------------------------------------- */
+.evaluacion-container {
+  width: calc(var(--item-size)*3);
+  height: calc(var(--item-size)*2);
+  position: relative;
+}
+
+.evaluacion-overlay {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.evaluacion-item {
+  min-width: var(--item-size);
+  max-width: var(--item-size);
+  min-height: var(--item-size);
+  max-height: var(--item-size);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrong {
+  position: fixed;
+  top: calc(100%/2);
+}
+
+.hidden {
+  display: none;
+}
+
+.send-back {
+  z-index: -1;
+}
+
+button {
+  background-color: #A8d0e6;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Solucion responsive ------------------------------------------------------------------------- */
+@media only screen and (max-width: 700px) {
+  aside {
+    display: none;
+  }
+}
+
+/* Tamaños de letra ------------------------------------------------------------------------- */
+
+.accesibilidad {
+  background-color: #3e56b8;
+  border: none;
+  padding: 4px;
+  color: #fff;
+}
+
+.txt-regular {
+  font-size: 20px;
+}
+
+.txt-mediano {
+  font-size: 32px;
+}
+
+.txt-grande {
+  font-size: 36px;
+}
+
+/* Estilos de proposito general ------------------------------------------------------------------------- */
+
+
+.itemsEvaluacion {
+  width: 200px;
+  height: 100px;
+  border-left: 1px solid #8395b9;
+}
+
+.evaluacion-container {
+  border: 3px solid #72a3db;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #fdf692;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: auto;
+  position: relative;
+}
+.actividad_base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+}
+#show-Cuento {
+  /* width: 20px; */
+  padding: 6px;
+  height: 70px;
+  border: none;
+  font-family: monospace;
+  color: rgb(170, 114, 11);
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(91, 153, 168, 0.4);
+}
+
+.contenedorCuento {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 64px;
+}
+
+
+#Escenario {
+  display: none;
+}
+
+#Escenario.visible {
+  width: 100%;
+  height: 800px;
+  max-width: 100%;
+
+  background-color: #1faaaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 64px;
+  overflow: hidden;
+  position: relative;
+  border: 6px solid #000000;
+
+}
+
+
+.contenedorPersonajes {
+  width: 100%;
+  height: 600px;
+  max-height: 100%;
+  min-height: 600px;
+  transition: opacity .5s;
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 6px solid #000000;
+  background: rgb(6, 11, 1);
+  background: linear-gradient(0deg, rgba(1, 6, 11, 1) 2%, rgba(33, 54, 136, 1) 37%, rgba(102, 61, 157, 1) 75%);
+}
+
+#EscenarioCambio {
+  background-image: url("Images/EscenarioCambio.gif");
+  background-size: cover;
+}
+
+#Escenario1,
+#Escenario3 {
+  background-image: url("Images/Escenario1_3.png");
+  background-size: cover;
+}
+
+#Escenario2 {
+  background-image: url("Images/Escenario2.png");
+  background-size: cover;
+}
+
+#Escenario4 {
+  background-image: url("Images/Escenario4.gif");
+  background-size: cover;
+}
+
+#Escenario5 {
+  background-image: url("Images/Escenario5.gif");
+  background-size: cover;
+}
+
+#Escenario6 {
+  background-image: url("Images/Escenario6.gif");
+  background-size: cover;
+}
+
+#Escenario7 {
+  background-image: url("Images/Escenario7.gif");
+  background-size: cover;
+}
+
+.contendorDialogo {
+  width: 100%;
+  font-size: 60px;
+  height: 200px;
+  max-height: 100%;
+  padding-left: 50px;
+  display: inline-block;
+  font-family: 'VT323', monospace;
+  background-color: #f9f9f9;
+  color: #000000;
+}
+
+.typed {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+
+
+#Escena1Sloth,
+#Escena2Unicornio,
+#Escena2Koala,
+#Escena2Llama,
+#Escena3Sloth #Escena4Unicornio,
+#Escena4Koala,
+#Escena4Llama,
+#Escena5Unicornio,
+#Escena5Koala,
+#Escena5Llama,
+#Escena6Unicornio,
+#Escena6Koala,
+#Escena6Llama,
+#Escena7Sloth {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(1deg) translateX(1px);
+  }
+
+  50% {
+    transform: rotate(3deg) translateX(3px);
+  }
+
+  100% {
+    transform: rotate(1deg) translateX(1px);
+  }
+}
+
+@keyframes headbang {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes horizontal-move {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes vertical-move {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* Movimientos de Escena 1  */
+
+#cabezaLlama {
+  animation: headbang 1s infinite linear;
+}
+
+#notasMusicales {
+  animation: tilt 4s infinite linear;
+}
+
+#cabezaKoala {
+  animation: horizontal-move 4s infinite linear;
+}
+
+#pupilasKoala {
+  animation: horizontal-move 4s infinite linear;
+}
+
+#unicornioBalloon {
+  animation: vertical-move 5s infinite linear;
+}
+
+#globosUnicornio {
+  animation: horizontal-move 2s infinite linear;
+}
+
+#pataUnicornio {
+  animation: horizontal-move 4s infinite linear;
+}
+
+
+/* Movimientos de Escena 2 */
+
+#cuerpoKoalaAngry {
+  animation: headbang 2s infinite linear;
+}
+
+#cabezaKoalaAngry {
+  animation: headbang 2.1s infinite linear;
+}
+
+#ojosKoalaAngry {
+  animation: headbang 4s infinite linear;
+}
+
+#cejasLlamaAngry {
+  animation: headbang 3s infinite linear;
+}
+
+#cabezaLlamaAngry {
+  animation: tilt 4.1s infinite linear;
+}
+
+#rayitasLlamaAngry {
+  animation: horizontal-move 0.2s infinite linear;
+}
+
+#colaUnicornioAngry {
+  animation: headbang 2s infinite linear;
+}
+
+#humoUnicornioAngry {
+  animation: tilt 4s infinite linear;
+}
+
+#cejasUnicornioAngry {
+  animation: headbang 3s infinite linear;
+}
+
+/* Movimientos de Escena 3 */
+/* /* */
+#lagrimaUnicornioSad {
+  animation: vertical-move 3s infinite linear;
+}
+
+#rayitasUnicornioSad {
+  animation: headbang 3s 1s infinite linear;
+}
+
+#bocaKoalaSad {
+  animation: headbang 3s infinite linear;
+}
+
+#orejasKoalaSad {
+  animation: headbang 4s infinite linear;
+}
+
+#cabezaLlamaSad {
+  animation: tilt 4s infinite linear;
+}
+
+#cuerpoLlamaSad {
+  animation: headbang 6s infinite linear;
+}
+
+#bocaLlamaSad {
+  animation: headbang 4s infinite linear;
+}
+
+/* Movimientos de Escena 4 */
+
+#cabezaKoalaHappy {
+  animation: tilt 2s infinite linear;
+}
+
+#brazoKoalaHappy {
+  animation: headbang 3s infinite linear;
+}
+
+#brazoLlamaHappy {
+  animation: horizontal-move 3s infinite linear;
+}
+
+#brazoIzLlamaHappy {
+  animation: headbang 2s infinite linear;
+
+}
+
+#piernaDerLlamaHappy {
+  animation: tilt 3s infinite linear;
+}
+
+#piernaIzLlamaHappy {
+  animation: horizontal-move 3s infinite linear;
+}
+
+#cabelloUnicornioHappy {
+  animation: tilt 3s infinite linear;
+}
+
+#brazoUnicornioHappy {
+  animation: tilt 2s infinite linear;
+}
+
+#GroupU {
+  animation: headbang 3s infinite linear;
+}
+
+a {
+  color: rgb(69, 168, 224);
+}
+
+/* Visited link */
+a:visited {
+  color: rgb(248, 236, 130);
+}
+
+/* Hovered link */
+a:hover {
+  color: rgb(255, 196, 0);
+}
+
+
+
+
+
+.calculadora {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #374785;
+}
+
+.numeroInput {
+  background-color: #e1e5ef;
+  border: solid 3px #fefefe;
+  border-radius: 8px;
+  font-size: 20px;
+  color: #1c215b;
+}
+
+
+
+.Instrucciones {
+  font-size: 20px;
+  color: #ffffff;
+  text-align: left;
+  margin: 30px;
+}
+
+.blockNotas {
+  background-color: #8395b9;
+  border: solid 3px #081e44;
+  border-radius: 13px;
+  text-align: center;
+}
+
+#notas {
+  padding: 15px;
+  width: 500px;
+  height: 200px;
+  max-width: 800px;
+  max-height: 250px;
+  font-size: 20px;
+  color: #113588;
+  text-align: left;
+  margin: 30px;
+  border: solid 2px #063dab;
+}
+
+#contenidoNota {
+  background-color: #8395b9;
+  width: 500px;
+  height: 200px;
+  max-width: 800px;
+  max-height: 250px;
+  font-size: 20px;
+  color: #05070b;
+  text-align: left;
+  margin: 30px;
+  border: solid 2px #063dab;
+}
+
+.calcubtn {
+  background-color: #e1e5ef;
+  border: solid 2px #fefefe;
+  border-radius: 8px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 4px;
+}
+
+#result {
+  background-color: #e1e5ef;
+  border: solid 2px #fefefe;
+  color: #091a37;
+  border-radius: 8px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 4px;}
+
+  .datobtn {
+    background-color: #9cadd8;
+    border: solid 2px #fefefe;
+    border-radius: 8px;
+    font-size: 20px;
+    margin: 5px;
+    padding: 4px;
+    color: #0d1421;
+  }
+.datoFracciones {
+  background-color: #ffffff;
+  border: solid 2px #7aa2d2;
+  border-radius: 8px;
+  font-size: 20px;
+  margin: 15px;
+  padding: 14px;
+  align-items: center;
+  text-align: center;
+  color: #131e33;
+}
+
+.cuentobtn {
+  font-family: monospace;
+  background-color: #d9dfef;
+  border: solid 2px #edab25;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: 5px;
+  padding: 4px;
+  color: #0d1421;
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Matezosos| Block de Notas</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="icon" type="image/png" href="Images\SlothIcon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      </head>
+<body class="txt-regular Maxheight">
+    <header>
+        <h1>Block de notas</h1>
+        <!--  selector de tamaños de letra  --> 
+        <div = class ="accesibilidad-btn">
+          <button onclick="changeTxt('txt-regular')" class="accesibilidad txt-regular">
+            A
+          </button>
+          <button onclick="changeTxt('txt-mediano')" class="accesibilidad txt-mediano">
+            A
+          </button>
+          <button onclick="changeTxt('txt-grande')" class="accesibilidad txt-grande">
+            A
+          </button>
+        </div>
+      </header>
+
+  <div class ="contenido-pagina">
+     <!-- menú lateral de navegación -->
+    <aside>
+        <div class="side-menu" , class="txt-normal">
+          <nav>
+            <ul class="lista-menu" , style="list-style: none;">
+              <h3 class="titulo">Menu</h3>
+              <li><a href="1_Index.html">Inicio</a></li>
+              <li><a href="2_relaciones.html">Contenidos</a></li>
+              <li><a href="3_Actividad.html">¡A jugar!</a></li>
+              <li><a href="4_Cuento.html">Cuento</a></li>
+              <li><a href="5_Evaluacion.html">Evaluación</a></li>
+              <li><a href="6_calcu.html">Calculadora</a></li>
+              <li class="activo"><a>Block de notas</a></li>
+              <li><a href="8_Conclusion.html">Conclusión</a></li>
+              <li><a href="9_Bibliografia.html">Bibliografía</a></li>
+            </ul>
+          </nav>
+          <div class="datoFracciones">
+            <button class="datobtn" id="mostrarDatoAleatorio">Mostrar Dato Aleatorio</button>
+            <div id="resultado"></div>
+          </div>
+        </div>
+    </aside>
+
+    <main>
+        <div class="blockNotas">
+            <h3>Block de notas</h3>
+            <form>
+                <label for="notas">Notas:</label><br>
+              <textarea id="notas" placeholder="Escriba aquí sus notas..."></textarea> <br>
+              <label for="nombreArchivo">Nombre del archivo:</label><br>
+              <input type="text" id="nombreArchivo" placeholder="Nombre del archivo"/><br>
+              <input type="submit" value="Guardar archivo" id="guardarNotaBtn" />
+            </form>
+          </div>
+          <div class="cargaNota">
+            <h2>Seleccionar archivo para mostrar la nota</h2>
+            <p>Selecciona el archivo a mostrar</p>
+            <input type="file" id="archivoNota" />
+            <h4>Contenido de la nota:</h4>
+            <div id="contenidoNota"></div>
+          </div>
+    </main>
+
+  </div>
+
+  <main>
+    <!-- Main content goes here -->
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="ajax.js"></script>
+</body>
+</html>
+

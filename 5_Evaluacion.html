@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Matezosos| Evaluación</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/png" href="Images\SlothIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body class="txt-regular Maxheight">
+  <header>
+    <h1>Evaluación</h1>
+
+    <!--  selector de tamaños de letra  --> 
+    <div = class ="accesibilidad-btn">
+      <button onclick="changeTxt('txt-regular')" class="accesibilidad txt-regular">
+        A
+      </button>
+      <button onclick="changeTxt('txt-mediano')" class="accesibilidad txt-mediano">
+        A
+      </button>
+      <button onclick="changeTxt('txt-grande')" class="accesibilidad txt-grande">
+        A
+    </button>
+    </div>
+  </header>
+
+  <div class="contenido-pagina">
+
+    <!-- menú lateral de navegación -->
+    <aside>
+      <div class="side-menu">
+        <nav>
+          <ul class="lista-menu" , style="list-style: none;">
+            <h3 class="titulo">Menu</h3>
+            <li><a href="1_Index.html">Inicio</a></li>
+            <li><a href="2_relaciones.html">Contenidos</a></li>
+            <li><a href="3_Actividad.html">¡A jugar!</a></li>
+            <li><a href="4_Cuento.html">Cuento</a></li>
+            <li class="activo"><a>Evaluación</a></li>
+            <li><a href="6_calcu.html">Calculadora</a></li>
+            <li><a href="7_blockNotas.html">Block de notas</a></li>
+            <li><a href="8_Conclusion.html">Conclusión</a></li>
+            <li><a href="9_Bibliografia.html">Bibliografía</a></li>
+          </ul>
+        </nav>
+        <div class="datoFracciones">
+          <button class="datobtn" id="mostrarDatoAleatorio">Mostrar Dato Aleatorio</button>
+          <div id="resultado"></div>
+        </div>
+      </div>
+    </aside>
+    <main class="maxWidth">
+      <div>
+        <h2>¿Verdadero o falso?</h2>
+        <p>Verifica las relaciones de orden mostradas a continuación y marca si es verdadero o falso.
+          <br>¡Con cada acierto se revela una parte de la imagen misteriosa!
+        </p>
+        <br>
+      </div>
+      <div class="centrado">
+        <div class="evaluacion-container">
+          <div class="evaluacion-overlay">
+            <div class="evaluacion-item" id="item-1">
+              <img class="itemsEvaluacion" src="Images/Evaluacion1.jpg" />
+              <button  onclick="sendtoBack(1)">
+                Verdadero
+              </button>
+              <button onclick="showEquis()">
+                Falso
+              </button>
+            </div>
+            <div class="evaluacion-item" id="item-2">
+              <img class="itemsEvaluacion" src="Images/Evaluacion2.jpg" />
+              <button onclick="sendtoBack(2)">
+                Verdadero
+              </button>
+              <button onclick="showEquis()">
+                Falso
+              </button>
+            </div>
+            <div class="evaluacion-item" id="item-3">
+              <img class="itemsEvaluacion" src="Images/Evaluacion3.jpg" />
+              <button onclick="showEquis()">
+                Verdadero
+              </button>
+              <button onclick="sendtoBack(3)">
+                Falso
+              </button>
+            </div>
+            <div class="evaluacion-item" id="item-4">
+              <img class="itemsEvaluacion" src="Images/Evaluacion4.jpg" />
+              <button onclick="sendtoBack(4)">
+                Verdadero
+              </button>
+              <button onclick="showEquis()">
+                Falso
+              </button>
+            </div>
+            <div class="evaluacion-item" id="item-5">
+              <img class="itemsEvaluacion" src="Images/Evaluacion5.jpg" />
+              <button onclick="showEquis()">
+                Verdadero
+              </button>
+              <button onclick="sendtoBack(5)">
+                Falso
+              </button>
+            </div>
+            <div  class="evaluacion-item" id="item-6">
+              <img class="itemsEvaluacion"  src="Images/Evaluacion6.jpg" />
+              <button onclick="showEquis()">
+                Verdadero
+              </button>
+              <button onclick="sendtoBack(6)">
+                Falso
+              </button>
+            </div>
+          </div>
+          <img src="Images/fondo_evaluacion.jpg" />
+        </div>
+        <div class="wrong hidden" id="equis">
+          <img src="Images/equivocado.gif" />
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <footer>
+    <div>
+      <h1>Matezosos 2023</h1>
+      <h3>Diseño e implementación <br>Sharon Jimenez Gomez</h3>
+    </div>
+    <div><img src="Images/slothFooter.png" width="70"></div>
+    <div>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia Creative Commons"
+          style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Esta
+      obra está bajo una <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia
+        Creative
+        Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a>.
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script src="ajax.js"></script>
+</body>
+
+</html>

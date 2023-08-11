@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Matezosos| Aprendamos mate</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/png" href="Images\SlothIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body class = "txt-regular Maxheight">
+
+  <header>
+    <h1>Matezosos</h1>
+    <!--  selector de tamaños de letra  --> 
+    <div = class ="accesibilidad-btn">
+      <button onclick="changeTxt('txt-regular')" class="accesibilidad txt-regular">
+        A
+      </button>
+      <button onclick="changeTxt('txt-mediano')" class="accesibilidad txt-mediano">
+        A
+      </button>
+      <button onclick="changeTxt('txt-grande')" class="accesibilidad txt-grande">
+        A
+      </button>
+    </div>
+  </header>
+
+  <div class="contenido-pagina">
+
+    <!-- menú lateral de navegación -->
+    <aside>
+      <div class="side-menu">
+        <nav>
+          <ul>
+            <ul class="lista-menu" , style="list-style: none;">
+              <h3 class="titulo">Menu</h3>
+              <li class="activo"><a>Inicio</a></li>
+              <li><a href="2_relaciones.html">Contenidos</a></li>
+              <li><a href="3_Actividad.html">¡A jugar!</a></li>
+              <li><a href="4_Cuento.html">Cuento</a></li>
+              <li><a href="5_Evaluacion.html">Evaluación</a></li>
+              <li><a href="6_calcu.html">Calculadora</a></li>
+              <li><a href="7_blockNotas.html">Block de notas</a></li>
+              <li><a href="8_Conclusion.html">Conclusión</a></li>
+              <li><a href="9_Bibliografia.html">Bibliografía</a></li>
+            </ul>
+        </nav>
+        <div class="datoFracciones">
+          <button class="datobtn" id="mostrarDatoAleatorio">Mostrar Dato Aleatorio</button>
+          <div id="resultado"></div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="bloque-imagen">
+        <h1>¡Hola! Soy Euclides, el perezoso matemático.</h1>
+        <img src="Images\slothInicio.png" alt="Mascota de la contenido-pagina" width="300">
+        <br>
+        <p class="txt-normal">Soy el guía de este sitio, donde vamos a conocer más sobre las relaciones de orden de los
+          números. <br>
+          Observa el video para conocer más del tema y como lo estudiaremos en ese sitio.
+        </p>
+        <audio src="audios/index.mp3" controls> este es un elemento de audio no soportado por tu navegador, prueba con otro </audio>
+      </div>
+    </main>
+  </div>
+
+
+
+
+  <footer>
+    <div>
+      <h1>Matezosos 2023</h1>
+      <h3>Diseño e implementación <br>Sharon Jimenez Gomez</h3>
+    </div>
+    <div><img src="Images/slothFooter.png" width="70"></div>
+    <div>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia Creative Commons"
+          style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Esta
+      obra está bajo una <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia
+        Creative
+        Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a>.
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  <script src="ajax.js"></script>
+</body>
+
+</html>
